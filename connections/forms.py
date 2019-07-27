@@ -1,0 +1,1 @@
+# class (NewUserRegistrationForm(UserCreationForm))
