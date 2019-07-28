@@ -1,6 +1,7 @@
 import datetime
 
 from django.db import models
+from django.db.models.signals import post_save
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -37,6 +38,12 @@ class Player(models.Model):
     plans = models.TextField(blank=True, null=True)
     image =models.URLField(default='')
     points = models.BigIntegerField(default=0)
+
+def create_player(sender, **kwargs):
+    if kwargs['created']:
+        user_profile = Player.objects.create(user=kwargs['instance'])
+
+post_save.connect(create_player, sender=User)
 
 # class Interests(models.Model):
 #     player = models.ForeignKey(Player, on_delete=models.CASCADE)
