@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1> Register </h1>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        <div>
+            <div class="fieldWrapper">
+                {{ form.username.errors }}
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.first_name.errors }}
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.last_name.errors }}
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.email.errors }}
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.position.errors }}
+                {{ form.position.label_tag }}
+                {{ form.position }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.year.errors }}
+                {{ form.year.label_tag }}
+                {{ form.year }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.concentration.errors }}
+                {{ form.concentration.label_tag }}
+                {{ form.concentration }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.concentration.errors }}
+                {{ form.concentration.label_tag }}
+                {{ form.concentration }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.concentration.errors }}
+                {{ form.concentration.label_tag }}
+                {{ form.concentration }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.hometown.errors }}
+                {{ form.hometown.label_tag }}
+                {{ form.hometown }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.internship.errors }}
+                {{ form.internship.label_tag }}
+                {{ form.internship }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.postgrad.errors }}
+                {{ form.postgrad.label_tag }}
+                {{ form.postgrad }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.longterm.errors }}
+                {{ form.longterm.label_tag }}
+                {{ form.longterm }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.plans.errors }}
+                {{ form.plans.label_tag }}
+                {{ form.plans }}
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}  

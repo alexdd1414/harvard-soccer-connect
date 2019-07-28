@@ -37,7 +37,7 @@ class Player(models.Model):
     linkedin = models.URLField(default='')
     plans = models.TextField(blank=True, null=True)
     image =models.URLField(default='')
-    points = models.BigIntegerField(default=0)
+    points = models.IntegerField(null=True)
 
 def create_player(sender, **kwargs):
     if kwargs['created']:
