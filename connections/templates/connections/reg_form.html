@@ -9,8 +9,8 @@
     <h2>Register</h2>
     <form method="post">
         {% csrf_token %}
-        <!-- {{ form.as_p }} -->
-        <div>
+        {{ form.as_p }}
+        <!-- <div>
             <div class="fieldWrapper">
                 {{ form.username.errors }}
                 {{ form.username.label_tag }}
@@ -47,16 +47,6 @@
                 {{ form.concentration }}
             </div>
             <div class="fieldWrapper">
-                {{ form.concentration.errors }}
-                {{ form.concentration.label_tag }}
-                {{ form.concentration }}
-            </div>
-            <div class="fieldWrapper">
-                {{ form.concentration.errors }}
-                {{ form.concentration.label_tag }}
-                {{ form.concentration }}
-            </div>
-            <div class="fieldWrapper">
                 {{ form.hometown.errors }}
                 {{ form.hometown.label_tag }}
                 {{ form.hometown }}
@@ -81,7 +71,7 @@
                 {{ form.plans.label_tag }}
                 {{ form.plans }}
             </div>
-        </div>
+        </div> -->
         <button type="submit">Submit</button>
     </form>
 </div>
