@@ -1,4 +1,18 @@
+
 {% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>Register</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
+
+<!-- {% extends 'base.html' %}
 
 {% block head %}
 <h1> Register </h1>
@@ -9,7 +23,7 @@
     <h2>Register</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_p }} -->
         <!-- <div>
             <div class="fieldWrapper">
                 {{ form.username.errors }}
@@ -72,7 +86,7 @@
                 {{ form.plans }}
             </div>
         </div> -->
-        <button type="submit">Submit</button>
+        <!-- <button type="submit">Submit</button>
     </form>
 </div>
-{% endblock %}  
+{% endblock %}   -->
